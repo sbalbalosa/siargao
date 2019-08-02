@@ -52,9 +52,9 @@ export default function Header() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" color="inherit">
-          Chisello
+          Siargao
         </Typography>
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -69,6 +69,7 @@ export default function Header() {
             />
           </div>
         </Container>
+        <Button color="inherit">Sign up</Button>
         <Button color="inherit">Login</Button>
       </Toolbar>
     </AppBar>

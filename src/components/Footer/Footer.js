@@ -1,24 +1,25 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
-}));
 
 export default function Footer() {
-  const classes = useStyles();
   return (
-    <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
-      </Typography>
-    </footer>
+    <Box component="footer" bgcolor="primary.main" p={2}>
+      <Grid container spacing={3}>
+        <Grid item xs={3}>
+          <Typography variant="h6">Siargao</Typography>
+        </Grid>
+        <Grid item xs>
+          <ul>
+            <li>About Us</li>
+            <li>Company</li>
+          </ul>
+        </Grid>
+        <Grid item xs={3}>
+          Follow Us
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
