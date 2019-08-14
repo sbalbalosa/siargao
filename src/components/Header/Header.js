@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -46,32 +47,38 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ maxWidth }) {
   const classes = useStyles();
   return (
     <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" color="inherit">
-          Siargao
-        </Typography>
-        <Container maxWidth="md">
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+      <Container maxWidth={maxWidth}>
+        <Toolbar>
+          <Typography variant="h6" color="inherit">
+            Siargao
+          </Typography>
+          <Container maxWidth="md">
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+              />
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-        </Container>
-        <Button color="inherit">Sign up</Button>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
+          </Container>
+          <Button color="inherit">Sign up</Button>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 }
+
+Header.propTypes = {
+  maxWidth: PropTypes.string.isRequired,
+};
