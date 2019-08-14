@@ -18,6 +18,7 @@
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
     "@storybook/react": "^5.1.10",
+    "parcel-bundler": "^1.12.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
