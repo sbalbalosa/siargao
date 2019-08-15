@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from '../../layouts/Page/Page';
+import TextField from '../../forms/TextField/TextField';
 
-ReactDOM.render(<Page maxWidth="md">test</Page>, document.getElementById('root'));
+ReactDOM.render(
+  <Page>
+    <TextField />
+  </Page>,
+  document.getElementById('root'),
+);

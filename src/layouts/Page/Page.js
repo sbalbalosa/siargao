@@ -37,5 +37,5 @@ Page.propTypes = {
 
 Page.defaultProps = {
   children: null,
-  maxWidth: '',
+  maxWidth: 'lg',
 };
